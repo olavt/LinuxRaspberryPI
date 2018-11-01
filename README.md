@@ -103,12 +103,17 @@ $ sudo userdel -r pi
 $ curl -L https://aka.ms/moby-engine-armhf-latest -o moby_engine.deb && sudo dpkg -i ./moby_engine.deb
 ```
 
-```
 ### Download and install the moby-cli
+```
 $ curl -L https://aka.ms/moby-cli-armhf-latest -o moby_cli.deb && sudo dpkg -i ./moby_cli.deb
 ```
 
 ### Run apt-get fix
 ```
 $ sudo apt-get install -f
+```
+
+To be able to issue Docker commands without sudo:
+```
+$ sudo usermod -aG docker <your-username>
 ```
